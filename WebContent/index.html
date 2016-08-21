@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<link href="Stylesheet/visuals.css" type="text/css" rel="stylesheet" />
+<meta charset="UTF-8">
+
+<title>www.homes4you.bg</title>
+
+</head>
+
+<body>
+
+	<div id="header"></div>
+	<script>
+		$("#header").load("header.html");
+	</script>
+
+	<fieldset>
+		<legend>ТЪРСЕНЕ</legend>
+		<table class="searchtable">
+			<tr>
+				<td>
+					<form>
+						Град: <select name="grad">
+							<option value="empty"></option>
+							<option value="sofia">София</option>
+							<option value="plovdiv">Пловдив</option>
+							<option value="varna">Варна</option>
+							<option value="burgas">Бургас</option>
+							<option value="ruse">Русе</option>
+							<option value="starazagora">Стара Загора</option>
+						</select>
+					</form>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<form>
+						Вид имот: <select name="vidimot">
+							<option value="empty"></option>
+							<option value="oneroom">Едностаен апартамент</option>
+							<option value="tworoom">Двустаен апартамент</option>
+							<option value="threeroom">Тристаен апартамент</option>
+							<option value="fourroom">Четиристаен апартамент</option>
+							<option value="manyroom">Многостаен апартамент</option>
+							<option value="office">Офис</option>
+							<option value="garage">Гараж</option>
+							<option value="parcel">Парцел</option>
+							<option value="land">Земеделска земя</option>
+						</select>
+					</form>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Макс. цена: <input name="maxprice" type="text">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<form>
+						Сортирай по: <select name="sort">
+							<option value="price">Цена</option>
+							<option value="squareprice">Цена на кв.м.</option>
+							<option value="newest">Най-новите обяви</option>
+						</select>
+					</form>
+				</td>
+			</tr>
+
+			<tr>
+				<td><input type="submit" value="Търси">
+				<td>
+			</tr>
+		</table>
+	</fieldset>
+
+</body>
+
+</html>

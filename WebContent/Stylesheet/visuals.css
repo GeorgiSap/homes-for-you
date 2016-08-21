@@ -1,0 +1,81 @@
+@CHARSET "UTF-8";
+
+* {
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+div.logoimg {
+	position: relative;
+	margin-left: 500px;
+}
+
+p.logotext {
+	position: relative;
+	margin-left: 420px;
+	bottom: 210px;
+	font-weight:bold;
+}
+
+div.navigationbar {
+	position: relative;
+	margin-left: 900px;
+	bottom: 155px;
+}
+
+div.logbar {
+	position: relative;
+	margin-left: 1000px;
+	bottom: 230px;
+}
+
+table {
+	border: 1px solid black;
+	padding: 15px;
+	//border-spacing: 10px 12px;
+	
+}
+
+td {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+fieldset{
+	border: solid 2px ForestGreen;
+	position:relative;
+	display: inline-block;
+	margin-left: 415px;
+	bottom:50px;
+	
+}
+
+input[type=submit] {
+    padding:5px 5px; 
+    background:ForestGreen; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    color:white;
+    margin-left: 230px;
+    font-size:14px;
+}
+
+select[name=grad]{
+	width:236px;
+}
+
+input[name=maxprice]{
+	width:178px;
+}
+
+select[name=sort]{
+	width:171px;
+}
+
+legend{
+	color:ForestGreen;
+}
+
+a {
+	text-decoration: none;
+	color: ForestGreen;
+}
