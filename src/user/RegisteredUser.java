@@ -14,7 +14,6 @@ public class RegisteredUser extends Guest{
 	private String lastName;
 	private String password;
 	private Set<Property> userProperties;
-	private static Agency agency;
 
 	public RegisteredUser(String email, String phoneNumber, String firstName, String lastName,
 			String password) {
@@ -24,10 +23,6 @@ public class RegisteredUser extends Guest{
 		this.password = password;
 		userProperties = new HashSet<Property>();
 		
-	}
-	
-	public static void setAgency(Agency agency) {
-		RegisteredUser.agency = agency;
 	}
 
 	class Password {
@@ -39,7 +34,6 @@ public class RegisteredUser extends Guest{
 	}
 	
 	public void removeProperty(Property property) {
-		RegisteredUser.agency.removeProperty(property);
 		userProperties.remove(property);
 	}
 	

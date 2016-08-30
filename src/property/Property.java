@@ -8,9 +8,8 @@ import user.Guest;
 import user.RegisteredUser;
 
 public abstract class Property {
-	private ListingType listingType;
-	private PropertyType propertyType;
-	private Region region;
+	private String propertyType;
+	private String city;
 	private String address;
 	private double price;
 	private double area;
@@ -19,12 +18,11 @@ public abstract class Property {
 	private final int listingID; 
 	private static Integer nextID = 0;
 
-	public Property(Agency agency, ListingType listingType, PropertyType propertyType, Region region, 
+	public Property(Agency agency, String propertyType, String city, 
 			String address, double price, double area, Guest user) throws WrongPropertyException {
 		creationDate = LocalDateTime.now();
-		this.listingType = listingType;
 		this.propertyType = propertyType;
-		this.region = region;
+		this.city = city;
 		if (address != null) {
 			this.address = address;
 		} else {
@@ -54,31 +52,31 @@ public abstract class Property {
 		}
 	}
 
-	public Region getRegion() {
-		return region;
+	public String getCity() {
+		return this.city;
 	}
 
 	public double getPrice() {
-		return price;
+		return this.price;
 	}
 
 	public double getArea() {
-		return area;
+		return this.area;
 	}
 	
-	public PropertyType getPropertyType() {
-		return propertyType;
+	public String getPropertyType() {
+		return this.propertyType;
 	}
 
 	public LocalDateTime getCreationDate() {
-		return creationDate;
+		return this.creationDate;
 	}
 
 	@Override
 	public String toString() {
-		return "Property [listingType=" + listingType + ", propertyType=" + propertyType + ", region=" + region
-				+ ", address=" + address + ", price=" + price + ", area=" + area + ", user=" + user + ", creationDate="
-				+ creationDate + ", listingID=" + listingID + "]";
+		return "Property [propertyType=" + propertyType + ", region=" + city + ", address=" + address + ", price="
+				+ price + ", area=" + area + ", user=" + user + ", creationDate=" + creationDate + ", listingID="
+				+ listingID + "]";
 	}
 
 	public int getListingID() {

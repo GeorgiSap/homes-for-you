@@ -6,12 +6,8 @@ import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import property.Building;
-import property.PropertyType;
-import property.Region;
-import property.Land;
-import property.Parcel;
 import property.Property;
+import property.Region;
 
 public class Agency {
 	private Set<Property> properties;
@@ -29,13 +25,13 @@ public class Agency {
 	public void removeProperty(Property property) {
 		properties.remove(property);
 	}
-	//add params - min/max price, map with key region?
-	public SortedSet<Property> searchBy(Region region, Collection<PropertyType> buildingType, SortCriteria sortBy) {
+	
+	public SortedSet<Property> searchBy(String city, Collection<String> buildingType, SortCriteria sortBy) {
 		SortedSet<Property> result = new TreeSet<Property>(getComparator(sortBy));
 		for (Property property : properties) {
-			if (property.getRegion() == region) {
-				for (PropertyType type : buildingType) {
-					if (property.getPropertyType() == type) {
+			if (property.getCity().equals(city)) {
+				for (String type : buildingType) {
+					if (property.getPropertyType().equals(type)) {
 						result.add(property);
 						break;
 					}
@@ -78,10 +74,10 @@ public class Agency {
 		};
 		case REGION:
 			return (p1, p2) -> {
-				if (p1.getRegion().equals(p2.getRegion())) {
+				if (p1.getCity().equals(p2.getCity())) {
 					return p1.getListingID() - p2.getListingID();
 				}
-				return p1.getRegion().compareTo(p2.getRegion());
+				return p1.getCity().compareTo(p2.getCity());
 		};
 		default:
 			return (p1, p2) -> p1.getListingID() - p2.getListingID();
