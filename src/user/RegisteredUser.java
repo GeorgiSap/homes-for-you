@@ -16,8 +16,8 @@ public class RegisteredUser extends Guest{
 	private Set<Property> userProperties;
 
 	public RegisteredUser(String email, String phoneNumber, String firstName, String lastName,
-			String password) {
-		super(email, phoneNumber);
+			String password, String userName) {
+		super(email, phoneNumber, userName);
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.password = password;

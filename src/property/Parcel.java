@@ -16,6 +16,14 @@ public class Parcel extends Property{
 		this.hasWater = hasWater;
 	}
 	
+	public Parcel(Agency agency, String city, String address, double price, 
+			double area, Guest user, boolean isRegulated, boolean hasElectricity, boolean hasWater, String description) throws WrongPropertyException {
+		super(agency, PROPERTY_TYPE, city, address, price, area, user, description);
+		this.isRegulated = isRegulated;
+		this.hasElectricity = hasElectricity;
+		this.hasWater = hasWater;
+	}
+	
 
 	
 

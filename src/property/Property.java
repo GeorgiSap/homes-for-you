@@ -17,6 +17,7 @@ public abstract class Property {
 	private LocalDateTime creationDate;
 	private final int listingID; 
 	private static Integer nextID = 0;
+	private String description;
 
 	public Property(Agency agency, String propertyType, String city, 
 			String address, double price, double area, Guest user) throws WrongPropertyException {
@@ -50,6 +51,15 @@ public abstract class Property {
 		if (user instanceof RegisteredUser) {
 			((RegisteredUser) user).addProperty(this);
 		}
+	}
+	
+	public Property(Agency agency, String propertyType, String city, 
+			String address, double price, double area, Guest user, String description) throws WrongPropertyException {
+		this(agency, propertyType, city, address, price, area, user);
+		if (description != null && description.length() > 1) {
+			this.description = description;
+		}
+		
 	}
 
 	public String getCity() {

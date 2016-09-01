@@ -22,10 +22,10 @@ public class Demo {
 				"MANY_ROOM_APRTMENT", "FOUR_ROOM_APARTMENT", "LAND",
 				"ONE_ROOM_APARTMENT", "PARCEL", "THREE_ROOM_APARTMENT",
 				"ONE_ROOM_APARTMENT"};
-		Guest ivan = new Guest("ivan@gmail.com", "0899123456");
-		Guest stoyan = new Guest("stoyan@gmail.com", "0899111111");
-		Guest petkan = new RegisteredUser("petkan@gmail.com", "0899555555", "Petkan", "Petkanov", "pass1234");
-		Guest toshko = new Admin("toshko@gmail.com", "0899777777", "Toshko", "Afrikanski", "admin");
+		Guest ivan = new Guest("ivan@gmail.com", "0899123456", "Ivan");
+		Guest stoyan = new Guest("stoyan@gmail.com", "0899111111", "Stoyan");
+		Guest petkan = new RegisteredUser("petkan@gmail.com", "0899555555", "Petkan", "Petkanov", "pass1234", "Petko");
+		Guest toshko = new Admin("toshko@gmail.com", "0899777777", "Toshko", "Afrikanski", "admin", "Admin");
 		Guest[] users = {ivan, stoyan, petkan, toshko};
 
 		for (int i = 0; i < 100; i++) {
