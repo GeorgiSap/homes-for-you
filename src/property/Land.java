@@ -8,16 +8,16 @@ public class Land extends Property{
 	private int category;
 	
 	
-	public Land(Agency agency, String city, String address, double price, double area,
+	public Land(String city, String address, double price, double area,
 			Guest user, String landType, int category) throws WrongPropertyException {
-		super(agency, PROPERTY_TYPE, city, address, price, area, user);
+		super(PROPERTY_TYPE, city, address, price, area, user);
 		this.landType = landType;
 		this.category = category;
 	}
 	
-	public Land(Agency agency, String city, String address, double price, double area,
+	public Land(String city, String address, double price, double area,
 			Guest user, String landType, int category, String description) throws WrongPropertyException {
-		super(agency, PROPERTY_TYPE, city, address, price, area, user, description);
+		super(PROPERTY_TYPE, city, address, price, area, user, description);
 		this.landType = landType;
 		this.category = category;
 	}

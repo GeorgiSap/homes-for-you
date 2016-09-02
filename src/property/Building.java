@@ -9,20 +9,20 @@ public class Building extends Property {
 	private boolean hasTEC;
 	private boolean isFurnished;
 
-	public Building(Agency agency, String city, String address, double price, double area, Guest user,
+	public Building(String city, String address, double price, double area, Guest user,
 			String propertyType, int floor, String contructionType, boolean hasTEC, boolean isFurnished)
 			throws WrongPropertyException {
-		super(agency, propertyType, city, address, price, area, user);
+		super(propertyType, city, address, price, area, user);
 		this.floor = floor;
 		this.contructionType = contructionType;
 		this.hasTEC = hasTEC;
 		this.isFurnished = isFurnished;
 	}
 
-	public Building(Agency agency, String city, String address, double price, double area, Guest user,
+	public Building(String city, String address, double price, double area, Guest user,
 			String propertyType, int floor, String contructionType, boolean hasTEC, boolean isFurnished,
 			String description) throws WrongPropertyException {
-		super(agency, propertyType, city, address, price, area, user, description);
+		super(propertyType, city, address, price, area, user, description);
 		this.floor = floor;
 		this.contructionType = contructionType;
 		this.hasTEC = hasTEC;

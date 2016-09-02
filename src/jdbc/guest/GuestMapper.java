@@ -1,4 +1,4 @@
-package jdbc;
+package jdbc.guest;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

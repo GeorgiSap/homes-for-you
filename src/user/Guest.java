@@ -6,9 +6,9 @@ public class Guest {
 	private String userName;
 	
 	public Guest(String email, String phoneNumber, String userName) {	
-		this.email = email;
-		this.phoneNumber = phoneNumber;
-		this.userName = userName;
+		setEmail(email);
+		setPhoneNumber(phoneNumber);
+		setUserName(userName);
 	}
 	
 	public String getEmail() {
@@ -38,9 +38,7 @@ public class Guest {
 
 	@Override
 	public String toString() {
-		return getClass() + " [email=" + email + ", phoneNumber=" + phoneNumber + "]";
+		return "Guest [email=" + email + ", phoneNumber=" + phoneNumber + ", userName=" + userName + "]";
 	}
-	
-	
-	
+
 }

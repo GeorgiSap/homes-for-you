@@ -32,7 +32,7 @@ public class Demo {
 			Thread.sleep(1);
 			Property imot = null;
 			try {
-				imot = new Building(homes4You, cities[new Random().nextInt(cities.length)], 
+				imot = new Building(cities[new Random().nextInt(cities.length)], 
 						"Centar", new Random().nextInt(100000) + 50000, new Random().nextInt(100) + 50, 
 						users[new Random().nextInt(users.length)], typeArr[new Random().nextInt(typeArr.length)], new Random().nextInt(10), 
 						"Tuhla", new Random().nextBoolean(), new Random().nextBoolean());

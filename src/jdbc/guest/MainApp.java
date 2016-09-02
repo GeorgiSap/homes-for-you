@@ -1,11 +1,11 @@
-package jdbc;
+package jdbc.guest;
 
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import jdbc.GuestJDBCTemplate;
+import jdbc.guest.GuestJDBCTemplate;
 import user.Guest;
 
 public class MainApp {

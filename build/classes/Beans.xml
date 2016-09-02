@@ -15,8 +15,14 @@
 
    <!-- Definition for guestJDBCTemplate bean -->
    <bean id="guestJDBCTemplate" 
-      class="jdbc.GuestJDBCTemplate">
+      class="jdbc.guest.GuestJDBCTemplate">
       <property name="dataSource"  ref="dataSource" />    
    </bean>
+    <!-- Definition for cityJDBCTemplate bean -->
+   <bean id="cityJDBCTemplate" 
+      class="jdbc.city.CityJDBCTemplate">
+      <property name="dataSource"  ref="dataSource" />    
+   </bean>
+   
       
 </beans>

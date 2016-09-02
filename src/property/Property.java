@@ -19,7 +19,7 @@ public abstract class Property {
 	private static Integer nextID = 0;
 	private String description;
 
-	public Property(Agency agency, String propertyType, String city, 
+	public Property(String propertyType, String city, 
 			String address, double price, double area, Guest user) throws WrongPropertyException {
 		creationDate = LocalDateTime.now();
 		this.propertyType = propertyType;
@@ -47,15 +47,15 @@ public abstract class Property {
 		} else {
 			throw new WrongPropertyException("Wrong user");
 		}
-		agency.addProperty(this);
-		if (user instanceof RegisteredUser) {
-			((RegisteredUser) user).addProperty(this);
-		}
+//		agency.addProperty(this);
+//		if (user instanceof RegisteredUser) {
+//			((RegisteredUser) user).addProperty(this);
+//		}
 	}
 	
-	public Property(Agency agency, String propertyType, String city, 
+	public Property(String propertyType, String city, 
 			String address, double price, double area, Guest user, String description) throws WrongPropertyException {
-		this(agency, propertyType, city, address, price, area, user);
+		this(propertyType, city, address, price, area, user);
 		if (description != null && description.length() > 1) {
 			this.description = description;
 		}
