@@ -1,5 +1,3 @@
-@CHARSET "UTF-8";
-
 * {
 	font-family: Verdana, Geneva, sans-serif;
 }
@@ -13,7 +11,7 @@ p.logotext {
 	position: relative;
 	margin-left: 420px;
 	bottom: 210px;
-	font-weight:bold;
+	font-weight: bold;
 }
 
 div.navigationbar {
@@ -31,51 +29,120 @@ div.logbar {
 table {
 	border: 1px solid black;
 	padding: 15px;
-	//border-spacing: 10px 12px;
-	
+	border-spacing: 10px 12px;
 }
 
 td {
-    padding-top: .5em;
-    padding-bottom: .5em;
+	padding-top: .5em;
+	padding-bottom: .5em;
 }
 
-fieldset{
+fieldset {
 	border: solid 2px ForestGreen;
-	position:relative;
+	position: relative;
 	display: inline-block;
 	margin-left: 415px;
-	bottom:50px;
-	
+	bottom: 50px;
 }
 
 input[type=submit] {
-    padding:5px 5px; 
-    background:ForestGreen; 
-    -webkit-border-radius: 5px;
-    border-radius: 5px; 
-    color:white;
-    margin-left: 230px;
-    font-size:14px;
+	padding: 5px 5px;
+	background: ForestGreen;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	color: white;
+	margin-left: 230px;
+	font-size: 14px;
 }
 
-select[name=grad]{
-	width:236px;
+input[name="floor"] {
+	width: 30px;
 }
 
-input[name=maxprice]{
-	width:178px;
+select[name=city] {
+	width: 237px;
 }
 
-select[name=sort]{
-	width:171px;
+input[name=maxprice] {
+	width: 179px;
 }
 
-legend{
-	color:ForestGreen;
+select[name=sort] {
+	width: 172px;
+}
+
+select[name=propertytype] {
+	width: 15em;
+}
+
+legend {
+	color: ForestGreen;
 }
 
 a {
 	text-decoration: none;
 	color: ForestGreen;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+textarea {
+	resize: none;
+}
+
+input[name=firstname] {
+	margin-left: 64px;
+	width: 241px;
+}
+
+input[name=lastname] {
+	margin-left: 22px;
+	width: 241px;
+}
+
+input[name=regusername] {
+	width: 240px;
+}
+
+input[name=regpassword] {
+	margin-left: 35px;
+	width: 240px;
+}
+
+input[name=username] {
+	width: 191px;
+}
+
+input[name=password] {
+	margin-left: 40px;
+	width: 191px;
+}
+
+input[name=phone] {
+	margin-left: 24px;
+	width: 240px;
+}
+
+input[name=address] {
+	width: 223px;
+}
+
+input[name=price] {
+	width: 231px;
+}
+
+input[name=area] {
+	width: 227px;
+}
+
+input[name=publishname] {
+	width: 236px;
+}
+input[name=publishphone] {
+	width: 196px;
+}
+input[name=publishemail] {
+	width: 224px;
 }

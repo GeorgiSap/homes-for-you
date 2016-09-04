@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-<title>Homes4you Недвижими Имоти</title>
+<title>Homes4you - Публикуване</title>
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 	$(function() {
@@ -13,16 +11,44 @@
 <link href="Stylesheet/visuals.css" type="text/css" rel="stylesheet" />
 <meta charset="UTF-8">
 
-</head>
+<script>
+	function getComboA(sel) {
+		var value = sel.value;
 
+		if (value == "oneroom" || value == "tworoom" || value == "threeroom"
+				|| value == "fourroom" || value == "manyroom"
+				|| value == "office" || value == "garage") {
+
+			$(function() {
+				$("#building").load("building.html");
+			});
+		}
+		if (value == "parcel") {
+			$(function() {
+				$("#parcel").load("parcel.html");
+			});
+		}
+		if(value=="land"){
+			$(function() {
+				$("#land").load("land.html");
+			});
+		}
+		if (value == "empty") {
+			location.reload();
+		}
+
+	}
+</script>
+
+</head>
 <body>
 
 	<div id="header"></div>
 
 	<fieldset>
-		<legend>Търсене</legend>
-		<table class="searchtable">
-		
+		<legend>Публикуване</legend>
+		<table class="publishtable">
+
 			<tr>
 				<td>
 					<form>
@@ -42,7 +68,8 @@
 			<tr>
 				<td>
 					<form>
-						Вид имот: <select name="propertytype">
+						Вид имот: <select id="comboA" name="propertytype"
+							onchange="getComboA(this)">
 							<option value="empty"></option>
 							<option value="oneroom">Едностаен апартамент</option>
 							<option value="tworoom">Двустаен апартамент</option>
@@ -59,30 +86,56 @@
 			</tr>
 
 			<tr>
-				<td>Макс. цена: <input name="maxprice" type="text">
+				<td>Адрес: <input name="address" type="text">
+				</td>
+			</tr>
+
+			<tr>
+				<td>Цена: <input name="price" type="text"> лв.
+				</td>
+			</tr>
+
+			<tr>
+				<td>Площ: <input name="area" type="text"> кв.м.
 				</td>
 			</tr>
 
 			<tr>
 				<td>
-					<form>
-						Сортирай по: <select name="sort">
-							<option value="price">Цена</option>
-							<option value="squareprice">Цена на кв.м.</option>
-							<option value="newest">Най-новите обяви</option>
-						</select>
-					</form>
+					<div id="building"></div>
+					<div id="parcel"></div>
+					<div id="land"></div>
 				</td>
 			</tr>
 
 			<tr>
-				<td> <input type="submit" value="Търси">
+				<td>Описание: <br> <textarea class="description" rows="5"
+						cols="36"> </textarea>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Име: <input name="publishname" type="text">
+				</td>
+			</tr>
+
+			<tr>
+				<td>Телефон: <input name="publishphone" type="text">
+				</td>
+			</tr>
+
+			<tr>
+				<td>Email: <input name="publishemail" type="text">
+				</td>
+			</tr>
+
+			<tr>
+				<td><input class="logbutton" type="submit" value="Публикувай">
 				<td>
 			</tr>
-			
+
 		</table>
 	</fieldset>
 
 </body>
-
 </html>

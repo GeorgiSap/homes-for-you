@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Homes4you - Регистрация</title>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$(function() {
+		$("#header").load("header.html");
+	});
+</script>
+<link href="Stylesheet/visuals.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+	<div id="header"></div>
+
+	<fieldset>
+		<legend>Регистрация</legend>
+		<table class="logintable">
+		
+			<tr>
+				<td>Име <input name="firstname" type="text">
+				</td>
+			</tr>
+
+			<tr>
+				<td>Фамилия <input name="lastname" type="text">
+				</td>
+			</tr>
+
+			<tr>
+				<td>Телефон <input name="phone" type="text">
+				</td>
+			</tr>
+
+
+			<tr>
+				<td>Потребител <input name="regusername" placeholder="email address"
+					type="text"></td>
+			</tr>
+
+			<tr>
+				<td>Парола <input name="regpassword" type="password">
+				</td>
+			</tr>
+
+			<tr>
+				<td><input type="submit" value="Регистриране">
+				<td>
+			</tr>
+
+		</table>
+
+	</fieldset>
+
+</body>
+</html>
