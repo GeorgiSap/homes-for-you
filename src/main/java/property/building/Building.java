@@ -2,24 +2,22 @@ package property.building;
 
 import java.util.Date;
 
-import property.city.City;
 import property.main.Property;
 import property.main.PropertyException;
-import property.type.PropertyType;
-import user.Guest;
 
 public class Building extends Property {
 	private int floor;
-	private String contructionType;
+	private int contructionTypeId;
 	private boolean hasTEC;
 	private boolean isFurnished;
 
 	public Building(int listingID, int cityId, String address, int price, int area, Date creationDate, int userId,
-			int propertyTypeId, int floor, String contructionType, boolean hasTEC, boolean isFurnished,
+			int propertyTypeId, int floor, int contructionTypeId, boolean hasTEC, boolean isFurnished,
 			String description) throws PropertyException {
 		super(listingID, propertyTypeId, cityId, address, price, area, creationDate, userId, description);
+
 		this.floor = floor;
-		this.contructionType = contructionType;
+		this.contructionTypeId = contructionTypeId;
 		this.hasTEC = hasTEC;
 		this.isFurnished = isFurnished;
 	}
@@ -28,11 +26,11 @@ public class Building extends Property {
 		return floor;
 	}
 
-	public String getContructionType() {
-		return contructionType;
+	public int getContructionTypeId() {
+		return contructionTypeId;
 	}
 
-	public boolean isHasTEC() {
+	public boolean hasTEC() {
 		return hasTEC;
 	}
 
@@ -42,7 +40,7 @@ public class Building extends Property {
 
 	@Override
 	public String toString() {
-		return super.toString() + ", floor=" + floor + ", contructionType=" + contructionType + ", hasTEC=" + hasTEC
+		return super.toString() + ", floor=" + floor + ", contructionTypeId=" + contructionTypeId + ", hasTEC=" + hasTEC
 				+ ", isFurnished=" + isFurnished + "]\n";
 	}
 

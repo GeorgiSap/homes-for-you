@@ -13,9 +13,9 @@ public class PropertyTypeJDBCTemplate implements PropertyTypeDAO {
 
 	@Override
 	public void setDataSource(DataSource dataSource) {
-	      this.dataSource = dataSource;
-	      this.jdbcTemplateObject = new JdbcTemplate(dataSource);
-	   }
+		this.dataSource = dataSource;
+		this.jdbcTemplateObject = new JdbcTemplate(dataSource);
+	}
 	
 	@Override
 	public void create(PropertyType propertyType) {
@@ -33,10 +33,10 @@ public class PropertyTypeJDBCTemplate implements PropertyTypeDAO {
 	}
 
 	@Override
-	public PropertyType getId(int id) {
+	public PropertyType getId(String name) {
 		String SQL = "select * from property_types where name = ?";
 		PropertyType propertyType = jdbcTemplateObject.queryForObject(SQL, 
-	                        new Object[]{id}, new PropertyTypeMapper());
+	                        new Object[]{name}, new PropertyTypeMapper());
 	      return propertyType;
 	}
 

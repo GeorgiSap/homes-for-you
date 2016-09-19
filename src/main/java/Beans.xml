@@ -8,7 +8,6 @@
    <bean id="dataSource" 
       class="org.springframework.jdbc.datasource.DriverManagerDataSource">
       <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-      
       <property name="url" value="jdbc:mysql://localhost/hr"/>
       <property name="username" value="root"/>
       <property name="password" value="password"/>
@@ -22,19 +21,46 @@
       class="user.GuestJDBCTemplate">
       <property name="dataSource"  ref="dataSource" />    
    </bean>
-    <!-- Definition for cityJDBCTemplate bean -->
+   
+   <!-- Definition for cityJDBCTemplate bean -->
    <bean id="cityJDBCTemplate" 
       class="property.city.CityJDBCTemplate">
       <property name="dataSource"  ref="dataSource" />    
    </bean>
-       <!-- Definition for propertyTypeJDBCTemplate bean -->
+   
+   <!-- Definition for propertyTypeJDBCTemplate bean -->
    <bean id="propertyTypeJDBCTemplate" 
       class="property.type.PropertyTypeJDBCTemplate">
       <property name="dataSource"  ref="dataSource" />    
    </bean>
-          <!-- Definition for parcelTypeJDBCTemplate bean -->
+   
+   <!-- Definition for parcelJDBCTemplate bean -->
    <bean id="parcelJDBCTemplate" 
       class="property.parcel.ParcelJDBCTemplate">
+      <property name="dataSource"  ref="dataSource" />    
+   </bean>
+   
+   <!-- Definition for landJDBCTemplate bean -->
+   <bean id="landJDBCTemplate" 
+      class="property.land.LandJDBCTemplate">
+      <property name="dataSource"  ref="dataSource" />    
+   </bean>
+   
+   <!-- Definition for landTypeJDBCTemplate bean -->
+   <bean id="landTypeJDBCTemplate" 
+      class="property.land.type.LandTypeJDBCTemplate">
+      <property name="dataSource"  ref="dataSource" />    
+   </bean>
+   
+    <!-- Definition for buildingJDBCTemplate bean -->
+   <bean id="buildingJDBCTemplate" 
+      class="property.building.BuildingJDBCTemplate">
+      <property name="dataSource"  ref="dataSource" />    
+   </bean>
+   
+    <!-- Definition for constructionTypeJDBCTemplate bean -->
+   <bean id="constructionTypeJDBCTemplate" 
+      class="property.building.type.ConstructionTypeJDBCTemplate">
       <property name="dataSource"  ref="dataSource" />    
    </bean>
    

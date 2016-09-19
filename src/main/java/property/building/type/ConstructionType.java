@@ -1,10 +1,10 @@
-package property.type;
+package property.building.type;
 
-public class PropertyType {
+public class ConstructionType {
 	private int id;
 	String name;
-	
-	public PropertyType(int id, String name) {
+
+	public ConstructionType(int id, String name) {
 		this.id = id;
 		this.name = name;
 	}
@@ -24,10 +24,9 @@ public class PropertyType {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	@Override
 	public String toString() {
 		return this.name;
 	}
-
 }

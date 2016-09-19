@@ -18,7 +18,7 @@ public interface PropertyTypeDAO {
 
 	List<PropertyType> listPropertyTypes();
 
-	PropertyType getId(int id);
+	PropertyType getId(String name);
 
 	void update(int id, String name);
 

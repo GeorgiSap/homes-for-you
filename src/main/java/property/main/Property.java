@@ -1,10 +1,5 @@
 package property.main;
-import java.time.LocalDateTime;
 import java.util.Date;
-
-import property.city.City;
-import property.type.PropertyType;
-import user.Guest;
 
 public abstract class Property {
 	private int listingId;
@@ -117,13 +112,5 @@ public abstract class Property {
 		return this.listingId == ((Property) obj).getListingID();
 
 	}
-	
-	
-
-
-	
-	
-	
-	
 
 }

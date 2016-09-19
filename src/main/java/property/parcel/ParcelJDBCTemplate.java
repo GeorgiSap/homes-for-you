@@ -56,11 +56,11 @@ public class ParcelJDBCTemplate implements ParcelDAO {
 	public void updateParcel(Parcel parcel) {
 
 		String SQL = "update properties set city_id = ?, address = ?, price = ?, area = ?, creation_date = ?, property_type_id = ?, "
-				+ "user_id = ?, description = ? where id = ?";
+				+ "user_id = ?, description = ? where listing_id = ?";
 		jdbcTemplateObject.update(SQL, parcel.getCityId(), parcel.getAddress(), parcel.getPrice(), parcel.getArea(),
 				parcel.getCreationDate(), parcel.getPropertyTypeId(), parcel.getListingID());
 
-		String SQL2 = "update parcels is_regulated = ? has_electricity = ? has_water = ? where id = ?";
+		String SQL2 = "update parcels set is_regulated = ?, has_electricity = ?, has_water = ? where listing_id = ?";
 		jdbcTemplateObject.update(SQL2, parcel.isRegulated(), parcel.hasElectricity(), parcel.hasWater(),
 				parcel.getListingID());
 	}
