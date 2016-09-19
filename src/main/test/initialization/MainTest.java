@@ -18,7 +18,7 @@ import property.main.PropertyException;
 import property.type.PropertyType;
 import user.Admin;
 import user.Guest;
-import user.RegisteredUser;
+import user.registered.RegisteredUser;
 
 public class MainTest {
 
@@ -53,7 +53,7 @@ public class MainTest {
 						new Random().nextInt(users.length) + 1,
 						new Random().nextInt(typeArr.length) + 1,
 						new Random().nextInt(10), 
-						"Tuhla", 
+						1, 
 						new Random().nextBoolean(), 
 						new Random().nextBoolean(),
 						"Super imot"

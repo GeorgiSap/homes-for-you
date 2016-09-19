@@ -52,5 +52,22 @@
       <property name="dataSource"  ref="dataSource" />    
    </bean>
    
+    <!-- Definition for buildingJDBCTemplate bean -->
+   <bean id="buildingJDBCTemplate" 
+      class="property.building.BuildingJDBCTemplate">
+      <property name="dataSource"  ref="dataSource" />    
+   </bean>
+   
+    <!-- Definition for constructionTypeJDBCTemplate bean -->
+   <bean id="constructionTypeJDBCTemplate" 
+      class="property.building.type.ConstructionTypeJDBCTemplate">
+      <property name="dataSource"  ref="dataSource" />    
+   </bean>
+    <!-- Definition for registeredUserJDBCTemplate bean -->
+   <bean id="registeredUserJDBCTemplate" 
+      class="user.registered.RegisteredUserJDBCTemplate">
+      <property name="dataSource"  ref="dataSource" />    
+   </bean>
+   
       
 </beans>

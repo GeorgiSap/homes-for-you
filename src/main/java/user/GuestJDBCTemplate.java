@@ -16,18 +16,12 @@ public class GuestJDBCTemplate implements GuestDAO {
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplateObject;
 
-	/* (non-Javadoc)
-	 * @see user.GuestDAO#setDataSource(javax.sql.DataSource)
-	 */
 	@Override
 	public void setDataSource(DataSource dataSource) {
 		this.dataSource = dataSource;
 		this.jdbcTemplateObject = new JdbcTemplate(dataSource);
 	}
 
-	/* (non-Javadoc)
-	 * @see user.GuestDAO#create(user.Guest)
-	 */
 	@Override
 	public long create(Guest guest) {
 		String SQL = "insert into guests (email, phone_number, user_name) values (?, ?, ?)";
@@ -47,9 +41,6 @@ public class GuestJDBCTemplate implements GuestDAO {
 		return (long) keyHolder.getKey();
 	}
 
-	/* (non-Javadoc)
-	 * @see user.GuestDAO#getGuest(int)
-	 */
 	@Override
 	public Guest getGuest(int id) {
 		String SQL = "select * from guests where user_id = ?";
@@ -57,9 +48,6 @@ public class GuestJDBCTemplate implements GuestDAO {
 		return guest;
 	}
 
-	/* (non-Javadoc)
-	 * @see user.GuestDAO#listGuests()
-	 */
 	@Override
 	public List<Guest> listGuests() {
 		String SQL = "select * from guests";
@@ -67,9 +55,6 @@ public class GuestJDBCTemplate implements GuestDAO {
 		return guests;
 	}
 
-	/* (non-Javadoc)
-	 * @see user.GuestDAO#delete(int)
-	 */
 	@Override
 	public void delete(int id) {
 		String SQL = "delete from guests where user_id = ?";
@@ -77,9 +62,6 @@ public class GuestJDBCTemplate implements GuestDAO {
 		System.out.println("Deleted Guest Record with ID = " + id );
 	}
 
-	/* (non-Javadoc)
-	 * @see user.GuestDAO#deleteAll()
-	 */
 	@Override
 	public void deleteAll() {
 		String SQL = "delete from guests";
@@ -87,9 +69,6 @@ public class GuestJDBCTemplate implements GuestDAO {
 		System.out.println("Deleted All Guest Records");
 	}
 
-	/* (non-Javadoc)
-	 * @see user.GuestDAO#update(user.Guest)
-	 */
 	@Override
 	public void update(Guest user) {
 		String SQL = "update guests set email = ?, phone_number = ?, user_name = ? where user_id = ?";
